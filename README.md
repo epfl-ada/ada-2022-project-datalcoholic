@@ -6,6 +6,12 @@
 
 - Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 
+- How are the Data handled ?
+
+Our datasets are named **RateBeer.tar.gz**, **matched_beer_data.tar.gz**, **BeerAdvocate.tar.gz**. These are compressed folders containing both csv and txt files. In order to ease our analysis we created different methods to create this tree structure : 
+
+![image](data_structure.png)
+
 - Methods
 
 - Proposed timeline
