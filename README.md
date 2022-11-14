@@ -8,11 +8,15 @@
 
 - How are the Data handled ?
 
-Our datasets are named **RateBeer.tar.gz**, **matched_beer_data.tar.gz**, **BeerAdvocate.tar.gz**. These are compressed folders containing both csv and txt files. In order to ease our analysis we created different methods to create this tree structure : 
+Our datasets are named **RateBeer.tar.gz**, **matched_beer_data.tar.gz** and **BeerAdvocate.tar.gz**. These are compressed folders containing both csv and txt files. In order to ease our analysis we created different methods to create this tree structure : 
 
 ![image](data_structure.png)
 
+At the end the newly created compressed files are stored on our own machine and the notebooks use the same tree structure with the Data folder at the same level than the repository.
+
 - Methods
+
+For the RateBeer dataset, the ratings.txt.gz and reviews.txt.gz files are the same and correspond to the latter, we thus do not take the former in our analysis.
 
 - Proposed timeline
 
