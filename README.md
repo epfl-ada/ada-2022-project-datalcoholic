@@ -1,7 +1,6 @@
 # TITLE
 
 #### Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
-Did you know that former President Barack Obama was the first president ever to brew a beer in the White House ? The US was ranked 15th 
 
 **Are US people subject to give better grades for local beers? Do people prefer their state's beers?**
 
@@ -13,14 +12,12 @@ To address this question we should also consider answering the followings :
 - Are the preferred foreign beers similar to the preferred local beers —> is there a preferred type of beer for the region ?
 - How politics tendencies are spread within USA ? And can we observe trends in beer consumption related to this politics tendencies ? 
 
-To answer main idea : 
-How many countries have a national beer as a top beer/in the top X beers (LINK TO SUB IDEA ABOUT MOST CONSUMED BEERS)
-compare that ratio to the ratio of people that drink beers/ liter of beer drank per year in each country
-Find the ratio of national and foreign beers in the top X beers in each country
-
 #### Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 
+A dataset containing the consumption information to reduce bias in our analysis as the reviews we have may not represent at all the public opinion and consumption.
+_What are we looking for ?_ Sales information of different debiters in each states.
 
+A dataset containing votes results for the years we are considering (2001 - 2017) in order to answer our subquesion about links between politic tendencies and top liked beers.
 
 #### How are the Data handled ?
 
@@ -35,27 +32,36 @@ We created two different dataframes, one for each site, merging all the data we 
 
 ### **Data description**
 
+US_Code_User location_user US_Code_Beer beers_location beer_name beer_id brewery_name brewery_id style abv date user_name user_id appearance aroma palate taste overall rating text
+
 | Column name          | Description                                                                                                                                                                                       |   |   |   |
 |----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---|---|---|
-| beer_id           | The beer ID                                                                                                                                                 |   |   |   |
-| beer_name            | The beer name                                                                                       |   |   |   |
-| brewery_id | The Brewerie name                                                                                                                     |   |   |   |
-| brewery_name          | The brewery name   |   |   |   |
-| style             | Beer style (e.g. English Brown Ale, Indian Pale Ale, Kölsch)                                                                                                                                                                  |   |   |   |
-| nbr_ratings        | The number of ratings made for this beer ID                                                                                          |   |   |   |
-| nbr_reviews               | The number of reviews made for this beer ID                                     |   |   |   |
-| avg              |                                                                                                                                                                                 |   |   |   |
-| ba_score or rb_score                 | Numeric value attributed to the beer ID                                                                                                                                                    |   |   |   |
-| bros_score                 | ??                                                                                                                                                               |   |   |   |
-| abv           | Alcohol by volume, standard measurement, used worldwide, to assess the strength of a particular beer.                                                  |   |   |   |
-| avg_computed               |                                                                                                                      |   |   |   |
-| zscore         |  |   |   |   |
-| nbr_matched_valid_ratings          | Along with significance, shown to editors to guide decisions about what test to choose                                                                                                            |   |   |   |
-| avg_matched_valid_ratings               | Whether a package was selected by editors to be used on the Upworthy site after the test                                                                                                          |   |   |   |
+| US_Code_User           | Code format of the State origin of the user                                                                                                                                                |   |   |   |
+| location_user            | Origin country of the user                                                                                     |   |   |   |
+| US_Code_Beer | Code format of the State origin of the beer                                                                                                                |   |   |   |
+| beers_location          | Origin country of the beer   |   |   |   |
+| beer_name             | Beer name                                                                                                                                                                 |   |   |   |
+| beer_id        | The beer ID                                                                                          |   |   |   |
+| brewery_name               | The brewery name                                      |   |   |   |
+| brewery_id              | The brewery ID                                                                                                                                                                     |   |   |   |
+| style                 | Beer type (e.g. English Brown Ale, Indian Pale Ale, Kölsch)                                                                                                                                                     |   |   |   |
+| abv                 | Alcohol by volume, standard measurement, used worldwide, to assess the strength of a particular beer.                                                                                                                                                               |   |   |   |
+| date           | Date of the review                                                  |   |   |   |
+| user_name               |  User alias                                                                                                                    |   |   |   |
+| user_id         | User ID |   |   |   |
+| appearance          | Appearance aspect score of the beer                                                                                                             |   |   |   |
+| aroma               | Aroma aspect score of the beer                                                                                                        |   |   |   |
+| palate               | Palate aspect score of the beer                                                                                                     |   |   |   |
+| taste               | Taste aspect score of the beer                                                                                                         |   |   |   |
+| overall               | Overall aspect score of the beer                                                                                                       |   |   |   |
+| rating               | Score of the beer                                                                                                          |   |   |   |
+| text               | Review of the user                                                                                                       |   |   |   |
 
-
-
-Furthermore we load an additional dataset containing the persons present in the Quotebank dataset as a speaker. For the persons in the Quotebank dataset the second dataset contains the following for each person: Wikidata QID, full name, list of aliases. These aliases will turn very usefull in later stages of the project to detect persons being mentioned in quotes.
+Our workflow will consist in :
+- Extracting the geographical informations of the beer production and relating them to the reviewers origin states
+- Producing significant statististics about the number of rating within the USA as well as the number of reviwers (we aime to minimize the bias)
+- Performing historical opinion analysis thanks to reviews from 2001 to 2017, it will be done by supervised learning (regression and classification)
+- Identifying a subset of words that best explain a user’s review for each aspects and finding what's most valued by consumers.
 
 #### Proposed timeline
 
@@ -68,6 +74,7 @@ Before December 2d :
 - Homework 2 
 - Sentimental analysis of the reviews to see whether they corresponds to a positive or negative sentiment. Furthermore, we will perform emotional analysis to see the evolution of particular emotions throughout different reviews of a same user. 
 
+multiple-aspect rating
 Before December 16th :
 - Principal Components Analysis (PCA) keeping 2 of the 4 beer aspects 
 - Analysis of correlations between users nationalities and beer production locations
