@@ -2,26 +2,43 @@
 
 #### Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
 
-**Are US people subject to give better grades for local beers? Do people prefer their state's beers?**
+**Are people in the US subject to give better grades for their local beers ? Are political trends reflected in the consumption of beer ?**
 
 #### Research Questions: A list of research questions you would like to address during the project.
 
 To address this question we should also consider answering the followings : 
-- Are some states/cities more represented than others ? 
-- Are the most consumed beers also the ones with a greater number of rating ?
+- Are some states more represented than others in term of number of reviews ? Does it correlates with the consumption of beer per capita in those states ?
 - Are the preferred foreign beers similar to the preferred local beers —> is there a preferred type of beer for the region ?
-- How politics tendencies are spread within USA ? And can we observe trends in beer consumption related to this politics tendencies ? 
+- How politics tendencies are spread within USA ? Can we observe trends in beer consumption related to the political tendencies ? 
 
 #### Proposed additional datasets (if any): List the additional dataset(s) you want to use (if any), and some ideas on how you expect to get, manage, process, and enrich it/them. Show us that you’ve read the docs and some examples, and that you have a clear idea on what to expect. Discuss data size and format if relevant. It is your responsibility to check that what you propose is feasible.
 
-A dataset containing the consumption information to reduce bias in our analysis as the reviews we have may not represent at all the public opinion and consumption.
-_What are we looking for ?_ Sales information of different debiters in each states.
+We propose 4 additional datasets, all of them are relatively small but meaningfull.
 
-A dataset containing votes results for the years we are considering (2001 - 2017) in order to answer our subquesion about links between politic tendencies and top liked beers.
+1 : A table of corresponding states code following ISO-3 norm.
+- This table is saved into a *US_states.csv* file.
+- We need those codes to use Plotly Express, a library that helps us plot data on maps.
+- Origin : Wikipedia (https://en.wikipedia.org/wiki/ISO_3166-2:US)
+
+2 : A dataframe containing the population of the US per state and per year from year 1990 to 2020. 
+- This dataframe is saved into a *US_states_population.csv* file.
+- Origin : Beer Institute, Brewers Almanach 2021 (https://www.beerinstitute.org/member-portal/2020-brewers-almanac/), the dataset contains a lot of data on Beer industry in the US in general. The table has its original source from the US census.
+
+3 : A dataframe containing the annual average beer consumption per capita for each state from year 1990 to 2020
+- This dataframe is saved into a *US_states_beer_consumption_per_capita.csv* file.
+- We will use this dataframe and the datas from the states population to draw information regarding the characteristics of beer consumers in the different states and thus assert some crucial points about how much the ratings are spread unevenly across the population of beer consumers in the US.
+- Origin : Beer Institute, Brewers Almanach 2021 (https://www.beerinstitute.org/member-portal/2020-brewers-almanac/), the dataset contains a lot of data on Beer industry in the US in general. This dataframe more specifically is the apparent consumption per capita based on estimates of beer volume shipped to wholesalers and on the legal drinking age population by state.
+
+4 : A dataframe with the political inclination of each state (Democratic or Republican), derived from the the winner of each presidential election in the US since year 1972.
+- This datafreame has been saved into a *US_states_political_inclination.csv* file
+- We will use it to answere our most important question : **Can we observe trends in beer consumption related to the political tendencies ?**, to link states beer consumption and ratings statistics to their political tendencies at the time.
+- Origin : wikipedia (https://en.wikipedia.org/wiki/Red_states_and_blue_states), the table contain which candidate (Democratic or Republican) won the vote in each country for each presidential election and was therefore used to create a corresponding dataframe containing the overall political tendencies of each state for each presidential mandat. 
+
+The detail about all these dataframes, what they look like and how we scraped the ones from wikipedia can all be found in the following jupyter notebook : *external_data_handling.ipybn*.
 
 #### How are the Data handled ?
 
-Our datasets are named **RateBeer.tar.gz**, **matched_beer_data.tar.gz** and **BeerAdvocate.tar.gz**. These are compressed folders containing both csv and txt files. In order to ease our analysis we created different methods to create this tree structure : 
+Our datasets are named **RateBeer.tar.gz**, **matched_beer_data.tar.gz** and **BeerAdvocate.tar.gz**. These are compressed folders containing both csv and txt files. In order to ease our analysis we created different methods to create this tree structure (does not work well in dark mode for visualisation):
 
 ![image](data_structure.png)
 
@@ -87,11 +104,10 @@ Before December 23d :
 - README completion
 
 #### Organization within the team
-| Thibault | Claire | Mathis | Achraf |
+| Thibaut | Claire | Mathis | Achraf |
 |---|---|---|---|
-| Politic tendencies dataset handling and processing  | Data handling | Geographical correlations | Data cleaning/filtering |
+| External datasets handling and processing  | Data handling | Geographical correlations | Data cleaning/filtering |
 | Time Series Analysis | Sentimental analysis of reviews | Random forest training | Plot interractive US maps  |
 | Data Story (20%)  | Data Story (40%) | Data Story (20%) | Data Story (20%) |
 
 #### Questions for TAs (optional): Add here any questions you have for us related to the proposed project.
-
