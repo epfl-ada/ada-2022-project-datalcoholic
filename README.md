@@ -2,9 +2,14 @@
 
 #### Abstract: A 150 word description of the project idea and goals. What’s the motivation behind your project? What story would you like to tell, and why?
 
-**Are people in the US subject to give better grades for their local beers ? Are political trends reflected in the consumption of beer ?**
+Did you know that former President Barack Obama was the first president ever to brew a beer in the White House ? Beer is deeply ingrained in American culture, the US are ranked 15th in beer consumption per capita. 
+
+In our analysis we investigate if Americans have a preference for local beers or not. The US being an enormous country with varying cultures and customs, we analyze reviews from each state. Based on sentimental analysis, we will be able to cluster which words are more often used to describe good or bad feelings regarding the different beer aspects.
+We also find it interesting to explore if links between beer consumption and the political results of each state exist and if they represent a certain state of mind. 
 
 #### Research Questions: A list of research questions you would like to address during the project.
+
+**Are people in the US subject to give better grades for their local beers ? Are political trends reflected in the consumption of beer ?**
 
 To address this question we should also consider answering the followings : 
 - Are some states more represented than others in term of number of reviews ? Does it correlates with the consumption of beer per capita in those states ?
