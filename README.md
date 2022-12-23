@@ -41,11 +41,10 @@ We propose 4 additional datasets :
 4 : A dataframe with the political inclination of each state (Democratic or Republican), derived from the the winner of each presidential election in the US since year 1972.
 - This datafreame has been saved into a *US_states_political_inclination.csv* file
 - We will use it to answere our most important question : **Can we observe trends in beer consumption related to the political tendencies ?**, to link states beer consumption and ratings statistics to their political tendencies at the time.
-- Origin : wikipedia (https://en.wikipedia.org/wiki/Red_states_and_blue_states), the table contain which candidate (Democratic or Republican) won the vote in each country for each presidential election and was therefore used to create a corresponding dataframe containing the overall political tendencies of each state for each presidential mandat.
+- Origin : wikipedia (https://en.wikipedia.org/wiki/Red_states_and_blue_states), the table contain which candidate (Democratic or Republican) won the vote in each country for each presidential election and was therefore used to create a corresponding dataframe containing the overall political tendencies of each state for each presidential mandat. 
 
 5 : A dataframe with presidential election results in the US for 2000 to 2016, it comes from the wikipedia pages about those elections. It is used to determine which are the most Democratic and Republican states. 
 - name : *results_by_state_V2.csv*
-
 
 The detail about all these dataframes, what they look like and how we scraped the ones from wikipedia can all be found in the following jupyter notebook : *external_data_handling.ipybn*.
 
@@ -87,11 +86,6 @@ US_Code_User location_user US_Code_Beer beers_location beer_name beer_id brewery
 | rating               | Score of the beer                                                                                                          |   |   |   |
 | text               | Review of the user                                                                                                       |   |   |   |
 
-Our workflow will consist in (18/11/2022) :
-- Extracting the geographical informations of the beer production and relating them to the reviewers origin states
-- Producing significant statististics about the number of rating within the USA as well as the number of reviwers (we aime to minimize the bias)
-- Performing historical opinion analysis thanks to reviews from 2001 to 2017, it will be done by supervised learning (regression and classification)
-- Identifying a subset of words that best explain a user’s review for each aspects and finding what's most valued by consumers.
 
 #### Timeline
 
@@ -102,16 +96,18 @@ Before November 18th :
 
 Before December 2d :
 - Homework 2 
-- Sentimental analysis of the reviews to see whether they corresponds to a positive or negative sentiment. Furthermore, we will perform emotional analysis to see the evolution of particular emotions throughout different reviews of a same user. 
+- Implement changes from P2 feedback (merging, NaN values, etc.)
+- Sentimental analysis of the reviews to see whether they corresponds to a positive or negative sentiment
 
 Multiple-aspect rating
 Before December 16th :
-- Principal Components Analysis (PCA) keeping 2 of the 4 beer aspects 
-- Analysis of correlations between users nationalities and beer production locations
-- Random forest of 10’000 trees trained to find the optimal combination of aspects
-- Meaningful plots to complement the interactive maps
+- Principal Components Analysis (PCA) keeping 2 of the 4 beer aspects with the target variable overall grade
+- Multiple regression analysis to see how the beer aspects are correlated to the overall grade
+- Analysis of correlations between users locations and beer production locations
 
 Before December 23d :
+- Exploring correlations between beer aspects and overall grade for 4 different types of beers (IPA, Stout, Lager, Ale) and their mean values
+- Plotting interactive maps of the US for the 4 different types of beers with the number of reviews per state (as a percentage) and the mean overall grade per state (normalized)
 - Story-telling 
 - Github repository cleaning and organisation
 - README completion
