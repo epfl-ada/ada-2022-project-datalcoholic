@@ -43,6 +43,9 @@ We propose 4 additional datasets :
 - We will use it to answere our most important question : **Can we observe trends in beer consumption related to the political tendencies ?**, to link states beer consumption and ratings statistics to their political tendencies at the time.
 - Origin : wikipedia (https://en.wikipedia.org/wiki/Red_states_and_blue_states), the table contain which candidate (Democratic or Republican) won the vote in each country for each presidential election and was therefore used to create a corresponding dataframe containing the overall political tendencies of each state for each presidential mandat. 
 
+5 : A dataframe with presidential election results in the US for 2000 to 2016, it comes from the wikipedia pages about those elections. It is used to determine which are the most Democratic and Republican states. 
+- name : *results_by_state_V2.csv*
+
 The detail about all these dataframes, what they look like and how we scraped the ones from wikipedia can all be found in the following jupyter notebook : *external_data_handling.ipybn*.
 
 #### How are the Data handled ?
