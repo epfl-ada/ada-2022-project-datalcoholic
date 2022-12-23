@@ -86,7 +86,7 @@ US_Code_User location_user US_Code_Beer beers_location beer_name beer_id brewery
 
 #### Timeline
 
-Stage 1 - Before November 18th :
+Before November 18th :
 - Data processing, visualization, creation of a dataframe containing all the information extracted from every file for each website.
 - Creation of a new column containing the States name imported from Wikipedia to plot correctly a world map.
 - Interactive mapping of the different beer locations and users locations, worldwide and USA centered
