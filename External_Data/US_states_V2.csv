@@ -1,0 +1,52 @@
+ISO,ANSI,ANSI,USPS,USCG,GPO,AP,Name
+US-AL,AL,01,AL,AL,Ala.,Ala.,Alabama
+US-AK,AK,02,AK,AK,Alaska,Alaska,Alaska
+US-AZ,AZ,04,AZ,AZ,Ariz.,Ariz.,Arizona
+US-AR,AR,05,AR,AR,Ark.,Ark.,Arkansas
+US-CA,CA,06,CA,CF,Calif.,Calif.,California
+US-CO,CO,08,CO,CL,Colo.,Colo.,Colorado
+US-CT,CT,09,CT,CT,Conn.,Conn.,Connecticut
+US-DE,DE,10,DE,DL,Del.,Del.,Delaware
+US-DC,DC,11,DC,DC,D.C.,D.C.,District of Columbia
+US-FL,FL,12,FL,FL,Fla.,Fla.,Florida
+US-GA,GA,13,GA,GA,Ga.,Ga.,Georgia
+US-HI,HI,15,HI,HA,Hawaii,Hawaii,Hawaii
+US-ID,ID,16,ID,ID,Idaho,Idaho,Idaho
+US-IL,IL,17,IL,IL,Ill.,Ill.,Illinois
+US-IN,IN,18,IN,IN,Ind.,Ind.,Indiana
+US-IA,IA,19,IA,IA,Iowa,Iowa,Iowa
+US-KS,KS,20,KS,KA,Kans.,Kan.,Kansas
+US-KY,KY,21,KY,KY,Ky.,Ky.,Kentucky
+US-LA,LA,22,LA,LA,La.,La.,Louisiana
+US-ME,ME,23,ME,ME,Maine,Maine,Maine
+US-MD,MD,24,MD,MD,Md.,Md.,Maryland
+US-MA,MA,25,MA,MS,Mass.,Mass.,Massachusetts
+US-MI,MI,26,MI,MC,Mich.,Mich.,Michigan
+US-MN,MN,27,MN,MN,Minn.,Minn.,Minnesota
+US-MS,MS,28,MS,MI,Miss.,Miss.,Mississippi
+US-MO,MO,29,MO,MO,Mo.,Mo.,Missouri
+US-MT,MT,30,MT,MT,Mont.,Mont.,Montana
+US-NE,NE,31,NE,NB,Nebr.,Neb.,Nebraska
+US-NV,NV,32,NV,NV,Nev.,Nev.,Nevada
+US-NH,NH,33,NH,NH,N.H.,N.H.,New Hampshire
+US-NJ,NJ,34,NJ,NJ,N.J.,N.J.,New Jersey
+US-NM,NM,35,NM,NM,N. Mex.,N.M.,New Mexico
+US-NY,NY,36,NY,NY,N.Y.,N.Y.,New York
+US-NC,NC,37,NC,NC,N.C.,N.C.,North Carolina
+US-ND,ND,38,ND,ND,N. Dak.,N.D.,North Dakota
+US-OH,OH,39,OH,OH,Ohio,Ohio,Ohio
+US-OK,OK,40,OK,OK,Okla.,Okla.,Oklahoma
+US-OR,OR,41,OR,OR,Oreg.,Ore.,Oregon
+US-PA,PA,42,PA,PA,Pa.,Pa.,Pennsylvania
+US-RI,RI,44,RI,RI,R.I.,R.I.,Rhode Island
+US-SC,SC,45,SC,SC,S.C.,S.C.,South Carolina
+US-SD,SD,46,SD,SD,S. Dak.,S.D.,South Dakota
+US-TN,TN,47,TN,TN,Tenn.,Tenn.,Tennessee
+US-TX,TX,48,TX,TX,Tex.,Texas,Texas
+US-UT,UT,49,UT,UT,Utah,Utah,Utah
+US-VT,VT,50,VT,VT,Vt.,Vt.,Vermont
+US-VA,VA,51,VA,VA,Va.,Va.,Virginia
+US-WA,WA,53,WA,WN,Wash.,Wash.,Washington
+US-WV,WV,54,WV,WV,W. Va.,W.Va.,West Virginia
+US-WI,WI,55,WI,WS,Wis.,Wis.,Wisconsin
+US-WY,WY,56,WY,WY,Wyo.,Wyo.,Wyoming
