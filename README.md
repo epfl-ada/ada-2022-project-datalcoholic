@@ -83,31 +83,28 @@ US_Code_User location_user US_Code_Beer beers_location beer_name beer_id brewery
 | rating               | Score of the beer                                                                                                          |   |   |   |
 | text               | Review of the user                                                                                                       |   |   |   |
 
-Our workflow will consist in (18/11/2022) :
-- Extracting the geographical informations of the beer production and relating them to the reviewers origin states
-- Producing significant statististics about the number of rating within the USA as well as the number of reviwers (we aime to minimize the bias)
-- Performing historical opinion analysis thanks to reviews from 2001 to 2017, it will be done by supervised learning (regression and classification)
-- Identifying a subset of words that best explain a user’s review for each aspects and finding what's most valued by consumers.
 
 #### Timeline
 
-Before November 18th :
+Stage 1 - Before November 18th :
 - Data processing, visualization, creation of a dataframe containing all the information extracted from every file for each website.
 - Creation of a new column containing the States name imported from Wikipedia to plot correctly a world map.
 - Interactive mapping of the different beer locations and users locations, worldwide and USA centered
 
 Before December 2d :
 - Homework 2 
-- Sentimental analysis of the reviews to see whether they corresponds to a positive or negative sentiment. Furthermore, we will perform emotional analysis to see the evolution of particular emotions throughout different reviews of a same user. 
+- Implement changes from P2 feedback (merging, NaN values, etc.)
+- Sentimental analysis of the reviews to see whether they corresponds to a positive or negative sentiment
 
 Multiple-aspect rating
 Before December 16th :
-- Principal Components Analysis (PCA) keeping 2 of the 4 beer aspects 
-- Analysis of correlations between users nationalities and beer production locations
-- Random forest of 10’000 trees trained to find the optimal combination of aspects
-- Meaningful plots to complement the interactive maps
+- Principal Components Analysis (PCA) keeping 2 of the 4 beer aspects with the target variable overall grade
+- Multiple regression analysis to see how the beer aspects are correlated to the overall grade
+- Analysis of correlations between users locations and beer production locations
 
 Before December 23d :
+- Exploring correlations between beer aspects and overall grade for 4 different types of beers (IPA, Stout, Lager, Ale) and their mean values
+- Plotting interactive maps of the US for the 4 different types of beers with the number of reviews per state (as a percentage) and the mean overall grade per state (normalized)
 - Story-telling 
 - Github repository cleaning and organisation
 - README completion
